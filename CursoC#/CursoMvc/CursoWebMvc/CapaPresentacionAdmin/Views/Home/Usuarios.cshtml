@@ -1,0 +1,176 @@
+﻿
+@{
+    ViewBag.Title = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<CapaEntidad.Usuario>
+
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Tables</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active">Tables</li>
+        </ol>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-users me-1"></i> Lista de Usuarios
+            </div>
+
+            <div class="card-body">
+                <div class="col-12">
+                    <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("CrearUsuario", "Home")'">
+                        Crear nuevo Usuario
+                    </button>
+                </div>
+            </div>
+
+
+            <hr />
+            <table id="tabla" class="display cell-border" width="100%">
+                <caption>List of users</caption>
+                <thead>
+                    <tr>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().nombres)
+                        </th>
+                        <th scope="col">@Html.DisplayNameFor(model => model.First().nombres)</th>
+                        <th scope="col">@Html.DisplayNameFor(model => model.First().correo)</th>
+                        <th scope="col">@Html.DisplayNameFor(model => model.First().activo)</th>
+                        <th scope="col">Bontones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.nombres)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.apellidos)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.correo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.activo)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditUsuario", new { id = item.idUsuario }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.idUsuario }) |
+
+                                <button type="button" class="btn btn-danger"
+                                        data-id="@item.idUsuario"
+                                        data-url="@Url.Action("BorrarUsuario", "Home")"
+                                        onclick="deleteUsuario(@item.idUsuario)">
+                                    Eliminar
+                                </button>
+
+
+                            </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<div id="FormModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header  bg-dark text-white">
+                <h5 class="modal-title">Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body g-2">
+
+                <div class="row">
+                    <form>
+
+                        <input id="txtId" type="hidden" value="0">
+
+                        <div class="form-group">
+                            <label for="txtnombres">Nombre</label>
+                            <input type="text" class="form-control" id="txtnombres"
+                                   placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtapellidos">Apellido</label>
+                            <input type="text" class="form-control" id="txtapellidos"
+                                   placeholder="apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtcorreo">Correo</label>
+                            <input type="email" class="form-control" id="txtcorreo"
+                                   placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="cboactivo">Activo</label>
+                            <select class="form-control" id="activo" name="activo">
+                                <option value="1">Si</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script>
+
+   function deleteUsuario(usuario) {
+
+
+       console.log(usuario); 
+
+    if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+            jQuery.ajax({
+                url: '@Url.Action("EliminarUsuario", "Home")', 
+                type: "POST", 
+                data: JSON.stringify({ id: usuario }), 
+                dataType: "json", 
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    console.log(data); 
+                    $('#row-' + usuario).remove(); 
+                    alert("Usuario eliminado exitosamente."); 
+                },
+                error: function (error) {
+                    console.log(error); // Log de error
+                    alert("Ocurrió un error al intentar eliminar el usuario: " + error);
+                },
+                beforeSend: function () {
+                   
+                }
+            }); 
+        }
+    }
+
+
+
+
+
+
+
+    </script>
+}
+

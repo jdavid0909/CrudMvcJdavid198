@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\CursoC#\\CursoMvc\\CursoWebMvc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A13D70E4-D8E0-4612-A44D-EE0290DDE2C4}|CapaPresentacionAdmin\\CapaPresentacionAdmin.csproj|c:\\users\\user\\documents\\cursoc#\\cursomvc\\cursowebmvc\\capapresentacionadmin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A13D70E4-D8E0-4612-A44D-EE0290DDE2C4}|CapaPresentacionAdmin\\CapaPresentacionAdmin.csproj|solutionrelative:capapresentacionadmin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A13D70E4-D8E0-4612-A44D-EE0290DDE2C4}|CapaPresentacionAdmin\\CapaPresentacionAdmin.csproj|c:\\users\\user\\documents\\cursoc#\\cursomvc\\cursowebmvc\\capapresentacionadmin\\views\\home\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A13D70E4-D8E0-4612-A44D-EE0290DDE2C4}|CapaPresentacionAdmin\\CapaPresentacionAdmin.csproj|solutionrelative:capapresentacionadmin\\views\\home\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC08C7D9-6DBA-4693-9A04-8CA2FEB8F89C}|CapaDatos\\CapaDatos.csproj|c:\\users\\user\\documents\\cursoc#\\cursomvc\\cursowebmvc\\capadatos\\cd_usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC08C7D9-6DBA-4693-9A04-8CA2FEB8F89C}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\cd_usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\CursoC#\\CursoMvc\\CursoWebMvc\\CapaPresentacionAdmin\\Views\\Home\\Usuarios.cshtml",
+              "RelativeDocumentMoniker": "CapaPresentacionAdmin\\Views\\Home\\Usuarios.cshtml",
+              "ToolTip": "C:\\Users\\User\\Documents\\CursoC#\\CursoMvc\\CursoWebMvc\\CapaPresentacionAdmin\\Views\\Home\\Usuarios.cshtml",
+              "RelativeToolTip": "CapaPresentacionAdmin\\Views\\Home\\Usuarios.cshtml",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAEIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T22:28:26.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CD_Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\CursoC#\\CursoMvc\\CursoWebMvc\\CapaDatos\\CD_Usuarios.cs",
+              "RelativeDocumentMoniker": "CapaDatos\\CD_Usuarios.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\CursoC#\\CursoMvc\\CursoWebMvc\\CapaDatos\\CD_Usuarios.cs",
+              "RelativeToolTip": "CapaDatos\\CD_Usuarios.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAArwIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T22:05:39.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\CursoC#\\CursoMvc\\CursoWebMvc\\CapaPresentacionAdmin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "CapaPresentacionAdmin\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\CursoC#\\CursoMvc\\CursoWebMvc\\CapaPresentacionAdmin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "CapaPresentacionAdmin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwFQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T20:38:29.527Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

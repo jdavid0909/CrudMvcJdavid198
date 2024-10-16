@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "EditUsuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model CapaEntidad.Usuario
+
+
+<style>
+    .input-validation-error {
+        border-color: red;
+    }
+</style>
+<h2>EditUsuario</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="EditUsuario" method="post">
+            <div class="form-group">
+                <label for="nombres">Nombre del Usuario</label>
+                <input type="text" class="form-control" id="nombres" name="nombres" value="@Model.nombres" required />
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellido</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" value="@Model.apellidos" placeholder="apellidos" />
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="email" class="form-control" id="correo" name="correo" value="@Model.correo" placeholder="name@example.com" />
+            </div>
+            <div class="form-group">
+                <label for="activo">Activo</label>
+                <select class="form-control" id="activo" name="activo">
+                    <option value="true" @(Model.activo ? "selected" : "")>Si</option>
+                    <option value="false" @(!Model.activo ? "selected" : "")>No</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Editar Usuario</button>
+        </form>
+    </div>
+</div>
